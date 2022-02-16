@@ -1,10 +1,13 @@
+import { Form } from "./components/Form/Form";
 import { Navbar } from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <main className="bg-black min-h-screen text-white">
+    <main className="bg-white min-h-screen dark:text-white dark:bg-black">
       <Navbar />
-      <h1>Hello React</h1>
+      <div className="container m-auto">
+        <Form />
+      </div>
     </main>
   );
 }

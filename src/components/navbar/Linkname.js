@@ -4,7 +4,7 @@ export const Linkname = ({ title, address }) => {
   return (
     <a
       href={address}
-      className="h-full flex items-center border-b-2 border-transparent hover:border-white transition-all duration-200"
+      className="h-full flex items-center border-b-4 border-transparent hover:text-white hover:border-mySeconadary dark:hover:border-myPrimaryDark dark:hover:border-myLightTone transition-all duration-200 "
     >
       {title}
     </a>
