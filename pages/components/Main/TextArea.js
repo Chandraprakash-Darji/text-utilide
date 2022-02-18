@@ -1,13 +1,13 @@
 import React from "react";
 
-export const TextArea = ({ label, passValue, passOnChange }) => {
+export const TextArea = ({ textLabel, passValue, passOnChange }) => {
   return (
     <div className="w-full py-10 ">
       <label
         htmlFor="inputText"
-        className="block my-2 font-light text-xl tracking-wide"
+        className="block my-4 font-semibold text-xl tracking-wide"
       >
-        {label}
+        {textLabel}
       </label>
       <textarea
         value={passValue}
