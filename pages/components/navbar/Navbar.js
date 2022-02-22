@@ -3,23 +3,24 @@ import { Linkname } from "./Linkname";
 import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { LinkMob } from "./LinkMob";
+import Link from "next/link";
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <header className=" bg-myPrimaryVarient text-white px-5 dark:bg-black shadow-lg dark:shadow-white/10 fixed w-screen z-20">
         <div className="xl:container flex h-16 justify-between items-center m-auto">
-          <a href="/">
+          <Link passHref="/">
             <figure className="flex items-center font-bold gap-2 dark:text-myPrimaryDark">
               <BsReverseLayoutTextSidebarReverse size="1.5rem" />
               <figcaption className="tracking-wider">TextUtilise</figcaption>
             </figure>
-          </a>
+          </Link>
           <nav className="hidden gap-4 h-full items-center md:flex">
-            <Linkname title="Home" />
-            <Linkname title="Blog" />
-            <Linkname title="Projects" />
-            <Linkname title="Contact Us" />
+            <Linkname address="/" title="Home" />
+            <Linkname address="/" title="Blog" />
+            <Linkname address="/" title="Projects" />
+            <Linkname address="/" title="Contact Us" />
           </nav>
           {menuOpen ? (
             <AiOutlineClose
@@ -50,10 +51,10 @@ export const Navbar = () => {
             menuOpen ? "translate-y-10" : "-translate-y-full"
           } -translate-y-full transition-all duration-300 `}
         >
-          <LinkMob title="Home" />
-          <LinkMob title="Blog" />
-          <LinkMob title="Projects" />
-          <LinkMob title="Contact Us" />
+          <LinkMob address="/" title="Home" />
+          <LinkMob address="/" title="Blog" />
+          <LinkMob address="/" title="Projects" />
+          <LinkMob address="/" title="Contact Us" />
         </nav>
       </div>
     </>
