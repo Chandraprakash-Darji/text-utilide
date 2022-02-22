@@ -1,7 +1,8 @@
 import React from "react";
+import Link from "next/link";
 export const LinkMob = ({ title, address }) => {
   return (
-    <a
+    <Link
       href={address}
       className="h-full 
       w-max
@@ -15,6 +16,6 @@ export const LinkMob = ({ title, address }) => {
       transition-all duration-200 "
     >
       {title}
-    </a>
+    </Link>
   );
 };
