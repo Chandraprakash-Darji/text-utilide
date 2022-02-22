@@ -47,7 +47,7 @@ export const Navbar = () => {
       >
         <nav
           className={`flex md:hidden text-xl w-max mt-20 p-5 px-16 flex-col gap-7 items-center  bg-myPrimaryVarient/20 dark:bg-myPrimaryDark/20 rounded-2xl fixed z-10 backdrop-blur-sm border-white/20 border left-1/2 -translate-x-1/2 ${
-            menuOpen ? "translate-y-0" : "-translate-y-full"
+            menuOpen ? "translate-y-10" : "-translate-y-full"
           } -translate-y-full transition-all duration-300 `}
         >
           <LinkMob title="Home" />
