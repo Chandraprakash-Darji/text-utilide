@@ -11,7 +11,7 @@ function App() {
       </Head>
       <main className="bg-white min-h-screen dark:text-white dark:bg-black overflow-x-hidden">
         <Navbar />
-        <div className="container m-auto px-5 sm:px-10">
+        <div className="container mt-10 m-auto px-5 sm:px-10">
           <Main />
         </div>
       </main>

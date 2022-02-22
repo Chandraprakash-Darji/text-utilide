@@ -12,26 +12,17 @@ export const Main = () => {
 
   const errorMsg = (msg) => {
     setError(msg);
-    if (text === "")  setError("Enter Text");
     setTimeout(() => {
       setError(null);
     }, 1500);
   };
-  const resetTitle = () => {
-    document.title = `TextUtilise - ${error}`;
-    setTimeout(() => {
-      document.title = "TextUtilise - Home";
-    }, 2000);
-  };
   const handleUpClick = () => {
     setText(text.toUpperCase());
     errorMsg("Text UpperCase");
-    resetTitle();
   };
   const handleLoClick = () => {
     setText(text.toLowerCase());
     errorMsg("Text LowerCase");
-    resetTitle();
   };
   const handleClearClick = () => {
     setText("");
@@ -39,14 +30,12 @@ export const Main = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(text);
     errorMsg("Text Copied");
-    resetTitle();
   };
   const handleExtraSpace = () => {
     let newText = "";
     newText = text.split(/[" "]+/);
     setText(newText.join(" "));
     errorMsg("Extra Space Removed");
-    resetTitle();
   };
 
   const handleInvertClick = () => {
@@ -60,7 +49,6 @@ export const Main = () => {
     }
     setText(newText);
     errorMsg("Text Inverted");
-    resetTitle();
   };
   const handleReverseClick = () => {
     let newText = "";
@@ -69,7 +57,6 @@ export const Main = () => {
     }
     setText(newText);
     errorMsg("Text Reversed");
-    resetTitle();
   };
 
   return (
@@ -81,13 +68,37 @@ export const Main = () => {
         passOnChange={handleOnChange}
       />
       <div className="flex gap-4 flex-wrap">
-        <Button text="Convert to UpperCase" passOnClick={handleUpClick} />
-        <Button text="Convert to LowerCase" passOnClick={handleLoClick} />
-        <Button text="Clear Text" passOnClick={handleClearClick} />
-        <Button text="Invert Case" passOnClick={handleInvertClick} />
-        <Button text="Reverse Text" passOnClick={handleReverseClick} />
-        <Button text="Copy Text" passOnClick={handleCopy} />
-        <Button text="Remove Extra Space" passOnClick={handleExtraSpace} />
+        <Button
+          btnText="Convert to UpperCase"
+          passOnClick={handleUpClick}
+          textArea={text}
+        />
+        <Button
+          btnText="Convert to LowerCase"
+          passOnClick={handleLoClick}
+          textArea={text}
+        />
+        <Button
+          btnText="Clear Text"
+          passOnClick={handleClearClick}
+          textArea={text}
+        />
+        <Button
+          btnText="Invert Case"
+          passOnClick={handleInvertClick}
+          textArea={text}
+        />
+        <Button
+          btnText="Reverse Text"
+          passOnClick={handleReverseClick}
+          textArea={text}
+        />
+        <Button btnText="Copy Text" passOnClick={handleCopy} textArea={text} />
+        <Button
+          btnText="Remove Extra Space"
+          passOnClick={handleExtraSpace}
+          textArea={text}
+        />
       </div>
       <Summary text={text} />
       <Preview text={text} />

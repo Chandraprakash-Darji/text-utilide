@@ -1,13 +1,7 @@
 import React from "react";
 
 export const Summary = ({ text }) => {
-  const words = () => {
-    let arrOfWords = [];
-    for (const i of text.split(" ")) {
-      if (i.match(/\w+/)) arrOfWords.push(i);
-    }
-    return arrOfWords.length;
-  };
+  const words = () => text.split(/\s/).filter((ele) => ele.length !== 0).length;
 
   const timeToRead = () => {
     let timeTaken = words() / 125;
