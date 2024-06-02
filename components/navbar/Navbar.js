@@ -10,7 +10,7 @@ export const Navbar = () => {
     <>
       <header className=" bg-myPrimaryVarient text-white px-5 dark:bg-black shadow-lg dark:shadow-white/10 fixed w-screen z-20">
         <div className="xl:container flex h-16 justify-between items-center m-auto">
-          <Link passHref="/">
+          <Link href="/">
             <figure className="flex items-center font-bold gap-2 dark:text-myPrimaryDark">
               <BsReverseLayoutTextSidebarReverse size="1.5rem" />
               <figcaption className="tracking-wider">TextUtilise</figcaption>

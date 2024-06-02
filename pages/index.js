@@ -1,5 +1,5 @@
-import { Main } from "./components/Main/Main";
-import { Navbar } from "./components/navbar/Navbar";
+import { Main } from "../components/Main/Main";
+import { Navbar } from "../components/navbar/Navbar";
 import Head from "next/head";
 
 function App() {
